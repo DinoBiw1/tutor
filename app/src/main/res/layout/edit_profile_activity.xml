@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/users" />
+
+            <com.example.melodyhacker.tutor.Font.CTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:textSize="@dimen/font_size" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="@drawable/key" />-->
+
+            <!--<com.example.melodyhacker.tutor.Font.CEditTextView-->
+                <!--android:id="@+id/password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="@string/password"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:textSize="@dimen/font_size" />-->
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/name" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textSize="@dimen/font_size" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name"
+                android:textSize="@dimen/font_size" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></Spinner>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/where" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/line"
+                android:textSize="@dimen/font_size" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:textSize="@dimen/font_size" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/where"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/where"
+                android:textSize="@dimen/font_size" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:textSize="@dimen/font_size" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/faculty"
+                android:textSize="@dimen/font_size" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/tel" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tel"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/etc" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/etc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/etc"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!--<ImageView-->
+                <!--android:id="@+id/upload"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/cloud" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_profile"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/icon" />-->
+
+            <!--<com.example.melodyhacker.tutor.Font.CEditTextView-->
+                <!--android:id="@+id/path_file"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp" />-->
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ok" />
+</LinearLayout>

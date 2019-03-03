@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/melodyhacker/StudioProjects/tutor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/melodyhacker/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/afea854eb6d863f4e44eaa235bf2fbcc/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/melodyhacker/StudioProjects/Tutor/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/melodyhacker/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/afea854eb6d863f4e44eaa235bf2fbcc/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        }
+    ]
+}

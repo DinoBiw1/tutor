@@ -1,0 +1,29 @@
+<resources>
+    <string name="appbar_scrolling_view_behavior">View Scroll</string>
+    <string name="app_name">Tutor</string>
+    <string name="click">ล็อกอิน</string>
+    <string name="username">ชื่อผ้ใช้</string>
+    <string name="password">รหัส</string>
+    <string name="name">Name : </string>
+    <string name="etc">Etc : </string>
+    <string name="nointernet">มีปัญหาในการเชื่อมต่อ</string>
+    <string name="number">Tel : </string>
+    <string name="classs">Class : </string>
+    <string name="where">Where : </string>
+    <string name="degree">Degree : </string>
+    <string name="tel">Tel : </string>
+    <string name="clash">Clash : </string>
+    <string name="seach">Seach Area</string>
+    <string name="tutor">Tutor</string>
+    <string name="last_name">Last Name : </string>
+    <string name="address">Address : </string>
+    <string name="area">Area : </string>
+    <string name="line">Line ID : </string>
+    <string name="email">e-mail : </string>
+    <string name="faculty">Faculty : </string>
+    <string name="del">Please check the information before canceling the class</string>
+    <string name="req">You Check data before register class</string>
+    <string name="status">Status :</string>
+    <string name="rating">Give Rating for Tutor</string>
+    <string name="rate">Rate : </string>
+</resources>

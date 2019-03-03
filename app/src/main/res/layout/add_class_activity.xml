@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/classs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </Spinner>
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/calss" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/classs"
+                android:textSize="@dimen/font_size" />
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/clash" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/clash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/clash"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/list" />
+
+            <Spinner
+                android:id="@+id/degree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </Spinner>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/where" />
+
+            <Spinner
+                android:id="@+id/area"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/etc" />
+
+            <com.example.melodyhacker.tutor.Font.CEditTextView
+                android:id="@+id/etc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/etc"
+                android:textSize="@dimen/font_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ok" />
+
+
+</LinearLayout>

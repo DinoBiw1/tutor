@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.melodyhacker.tutor">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SeachClass"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".ListArea"></activity>
+        <activity android:name=".Register"></activity>
+        <activity android:name=".ProfileStudent"></activity>
+        <activity android:name=".ProfileTutor"></activity>
+        <activity android:name=".ListClass"></activity>
+        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".AddClassList"></activity>
+        <activity android:name=".NoInternet"></activity>
+        <activity android:name=".Ratting"></activity>
+        <activity android:name=".ListRatting"></activity>
+        <activity android:name=".SeeRatting"></activity>
+        <activity android:name=".ListStudy"></activity>
+
+    </application>
+
+</manifest>

@@ -1,4 +1,4 @@
-#Tue Feb 19 22:54:11 ICT 2019
-base.0=/home/melodyhacker/StudioProjects/Tutor/app/build/intermediates/transforms/dexMerger/debug/2
+#Sun Mar 03 21:39:26 ICT 2019
+base.0=/home/melodyhacker/StudioProjects/tutor/app/build/intermediates/transforms/dexMerger/debug/2
 path.0=classes.dex
 renamed.0=classes.dex

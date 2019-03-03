@@ -21,6 +21,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.melodyhacker.tutor.Adapter.ListAreaAdapter;
 import com.example.melodyhacker.tutor.Values.City;
+import com.example.melodyhacker.tutor.Values.Class;
+import com.example.melodyhacker.tutor.Values.Degree;
 import com.example.melodyhacker.tutor.Values.Url;
 import com.example.melodyhacker.tutor.Model.GetSetArea;
 
@@ -45,16 +47,22 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
     Dialog dialog;
     String name, degree, area, clash, etc;
     FileLog token = new FileLog();
+    Degree degree_list = new Degree();
+    Class classs = new Class();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seach_activity);
-
-
-        final Spinner spinnerAdapter = (Spinner) findViewById(R.id.spinner);
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item_seach, city.listCity());
-        spinnerAdapter.setAdapter(adapter);
+        final Spinner spinnerAdapterClass = (Spinner) findViewById(R.id.seach_class);
+        final Spinner spinnerAdapterCity = (Spinner) findViewById(R.id.seach_city);
+        final Spinner spinnerAdapterDegree = (Spinner) findViewById(R.id.seach_degree);
+        final ArrayAdapter<String> adapter_city = new ArrayAdapter<String>(this, R.layout.item_seach_city, city.listCity());
+        final ArrayAdapter<String> adapter_degree = new ArrayAdapter<String>(this, R.layout.item_seach_degree, degree_list.listDegree());
+        final ArrayAdapter<String> adapter_class = new ArrayAdapter<String>(this, R.layout.item_seach_class, classs.listClass());
+        spinnerAdapterClass.setAdapter(adapter_class);
+        spinnerAdapterCity.setAdapter(adapter_city);
+        spinnerAdapterDegree.setAdapter(adapter_degree);
         dialog = new Dialog(SeachClass.this);
         arrayList = new ArrayList<>();
         list = new ArrayList<>();
@@ -62,17 +70,19 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
         ok = (ImageView) dialog.findViewById(R.id.ok);
         name_class = (TextView) dialog.findViewById(R.id.name);
         seach = (ImageView) findViewById(R.id.seach);
-
         seach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setContentView(R.layout.list_activity);
                 recyclerView = findViewById(R.id.list);
-                findData(spinnerAdapter.getSelectedItem().toString());
+                findData(spinnerAdapterCity.getSelectedItem().toString(),
+                        spinnerAdapterClass.getSelectedItem().toString(),
+                        spinnerAdapterDegree.getSelectedItem().toString()
+                );
                 arrayList = new ArrayList<>();
                 list = new ArrayList<>();
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                Toast.makeText(SeachClass.this, spinnerAdapter.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SeachClass.this, spinnerAdapterClass.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
         });
         ok.setOnClickListener(new View.OnClickListener() {
@@ -82,11 +92,9 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
                 putData();
             }
         });
-
-
     }
 
-    public void findData(final String area) {
+    public void findData(final String area, final String classs, final String degree) {
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url.find_area, new Response.Listener<String>() {
             @Override
@@ -109,18 +117,7 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
                                 json.getString("R_LastName"),
                                 json.getString("R_URLIMG")));
                     }
-//                    list.add(new GetSetArea(
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            "",
-//                            ""));
+
                     setList(list);
 
                 } catch (JSONException e) {
@@ -141,6 +138,8 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
             protected Map<String, String> getParams() throws AbstractMethodError {
                 Map<String, String> parameters = new HashMap<String, String>();
                 parameters.put("area", area);
+                parameters.put("class", classs);
+                parameters.put("degree", degree);
                 return parameters;
             }
         };
@@ -192,15 +191,6 @@ public class SeachClass extends AppCompatActivity implements ListAreaAdapter.Ite
             @Override
             protected Map<String, String> getParams() throws AbstractMethodError {
                 Map<String, String> parameters = new HashMap<String, String>();
-//        $token = $_POST['token'];
-//        $name_class = $_POST['name_class'];
-//        $degree = $_POST['degree'];
-//        $area = $_POST['area'];
-//        $time = "08:00";//$_POST['time'];
-//        $position = " ";// $_POST['position'];
-//        $clash = $_POST['clash'];
-//        $etc = $_POST['etc'];
-//        $date = date("r");
                 parameters.put("token", token.getToken(getApplication()));
                 parameters.put("name_class", name);
                 parameters.put("area", area);

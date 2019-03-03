@@ -85,7 +85,7 @@ public class Register extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         line = (EditText) findViewById(R.id.line);
         faculty = (EditText) findViewById(R.id.faculty);
-        final ArrayAdapter<String> gender_adapter = new ArrayAdapter<String>(this, R.layout.item_seach, gender.listGender());
+        final ArrayAdapter<String> gender_adapter = new ArrayAdapter<String>(this, R.layout.item_seach_city, gender.listGender());
         gender_spin = (Spinner) findViewById(R.id.gender);
         gender_spin.setAdapter(gender_adapter);
         image_upload.setOnClickListener(new View.OnClickListener() {

@@ -25,7 +25,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.melodyhacker.tutor.Values.Gender;
 import com.example.melodyhacker.tutor.Values.Url;
-import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -71,7 +70,7 @@ public class EditProfile extends AppCompatActivity {
 //        image_profile = (ImageView) findViewById(R.id.img_profile);
 //        image_upload = (ImageView) findViewById(R.id.upload);
         save = (ImageView) findViewById(R.id.save);
-        gender_adapter = new ArrayAdapter<String>(this, R.layout.item_seach, gender.listGender());
+        gender_adapter = new ArrayAdapter<String>(this, R.layout.item_seach_city, gender.listGender());
         gender_spin.setAdapter(gender_adapter);
 //        image_upload.setOnClickListener(new View.OnClickListener() {
 //            @Override

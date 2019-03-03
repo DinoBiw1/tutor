@@ -62,9 +62,9 @@ public class AddClassList extends AppCompatActivity {
         save = (ImageView) findViewById(R.id.save);
         arrayList = new ArrayList<>();
         list = new ArrayList<>();
-        final ArrayAdapter<String> area_adapter = new ArrayAdapter<String>(this, R.layout.item_seach, city.listCity());
-        final ArrayAdapter<String> degree_adapter = new ArrayAdapter<String>(this, R.layout.item_seach, classs.listClass());
-        final ArrayAdapter<String> class_adpter = new ArrayAdapter<String>(this, R.layout.item_seach, degree.listDegree());
+        final ArrayAdapter<String> area_adapter = new ArrayAdapter<String>(this, R.layout.item_seach_city, city.listCity());
+        final ArrayAdapter<String> degree_adapter = new ArrayAdapter<String>(this, R.layout.item_seach_city, classs.listClass());
+        final ArrayAdapter<String> class_adpter = new ArrayAdapter<String>(this, R.layout.item_seach_city, degree.listDegree());
         area_spin.setAdapter(area_adapter);
         class_spin.setAdapter(degree_adapter);
         degree_spin.setAdapter(class_adpter);

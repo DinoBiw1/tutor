@@ -42,8 +42,9 @@ public class Ratting extends AppCompatActivity {
     Url url = new Url();
     ImageView ok, image;
     TextView full_name;
+    EditText comm;
     FileLog token = new FileLog();
-    String name, last_name, img, id, count,rate;
+    String name, last_name, img, id, count, rate, com;
     RatingBar rat;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,8 @@ public class Ratting extends AppCompatActivity {
         full_name = (TextView) findViewById(R.id.name);
         image = (ImageView) findViewById(R.id.img);
         full_name.setText(name + " " + last_name);
+        comm = (EditText) findViewById(R.id.command);
+        com = comm.getText().toString();
         Picasso.get().load(url.path_mage + img).into(image);
 
         rat = (RatingBar) findViewById(R.id.rat);
@@ -78,7 +81,7 @@ public class Ratting extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                putData(id, count);
+                putData(id, count, comm.getText().toString());
             }
         });
 
@@ -86,7 +89,7 @@ public class Ratting extends AppCompatActivity {
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    public void putData(final String id, final String rat) {
+    public void putData(final String id, final String rat, final String com) {
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url.ratting, new Response.Listener<String>() {
             @Override
@@ -111,6 +114,7 @@ public class Ratting extends AppCompatActivity {
                 parameters.put("token", token.getToken(getApplication()));
                 parameters.put("id", id);
                 parameters.put("rat", rat);
+                parameters.put("com", com);
                 return parameters;
             }
         };
